@@ -27,11 +27,19 @@ class Footer extends React.Component {
         </a>{' '}
         &bull;{' '}
         <a
-          href="https://www.linkedin.com/in/leonardoprocopio/"
+          href="https://www.linkedin.com/in/leonardo-proc%C3%B3pio-9b991936/"
           target="_blank"
           rel="noopener noreferrer"
         >
           linkedin
+        </a>{' '}
+        &bull;{' '}
+        <a
+          href="https://www.twitter.com/eek_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          twitter
         </a>
       </footer>
     );

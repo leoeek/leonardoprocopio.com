@@ -99,7 +99,7 @@ class BlogPostTemplate extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: html }} />
             <footer>
               <p>
-                <a href="mailto:ihenrits@gmail.com" rel="noopener noreferrer">
+                <a href="mailto:leonardolp@gmail.com" rel="noopener noreferrer">
                   {lang === 'pt-br'
                     ? 'Algum erro, sugestão, dúvida ou feedback? Fale comigo! ;)'
                     : 'Any errors, suggestions, doubt or feedback? Talk to me! ;)'}
