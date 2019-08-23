@@ -2,7 +2,7 @@
 title: Recarregar a página com JavaScript
 date: '2019-08-23'
 spoiler: Aquele que nunca precisou não sabe o valor de um reload
-# updateDate: '2019-08-23'
+updateDate: '2019-08-23'
 ---
 
 ## Vamos lá!

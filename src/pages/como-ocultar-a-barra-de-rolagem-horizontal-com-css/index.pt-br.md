@@ -2,7 +2,7 @@
 title: Como ocultar a barra de rolagem horizontal com CSS
 date: '2019-08-23'
 spoiler: Se me perguntam duas vezes merece o post. Vai dizer que você quando estava começando sabia dessa?
-# updateDate: '2019-08-23'
+updateDate: '2019-08-23'
 ---
 
 ## Vamos lá!
