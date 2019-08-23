@@ -162,7 +162,7 @@ if (process.env.CONTEXT === `production`) {
   cfg.plugins.push({
     resolve: `gatsby-plugin-google-analytics`,
     options: {
-      trackingId: `UA-145475954-1`,
+      trackingId: `UA-25369842-1`,
     },
   });
 }
