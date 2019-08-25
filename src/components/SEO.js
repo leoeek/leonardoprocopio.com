@@ -1,7 +1,7 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import React from "react";
+import Helmet from "react-helmet";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
 
 const query = graphql`
   query GetSiteMetadata {
@@ -19,7 +19,7 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, image, title, description, slug, lang = 'pt-br' }) {
+function SEO({ meta, image, title, description, slug, lang = "pt-br" }) {
   return (
     <StaticQuery
       query={query}
@@ -34,56 +34,56 @@ function SEO({ meta, image, title, description, slug, lang = 'pt-br' }) {
             {...(title
               ? {
                   titleTemplate: `%s — ${siteMetadata.title}`,
-                  title,
+                  title
                 }
               : {
-                  title: `${siteMetadata.title} — think different.`,
+                  title: `${siteMetadata.title} — compartilhando para não esquecer.`
                 })}
             meta={[
               {
-                name: 'description',
-                content: metaDescription,
+                name: "description",
+                content: metaDescription
               },
               {
-                property: 'og:url',
-                content: url,
+                property: "og:url",
+                content: url
               },
               {
-                property: 'og:title',
-                content: title || siteMetadata.title,
+                property: "og:title",
+                content: title || siteMetadata.title
               },
               {
-                property: 'og:description',
-                content: metaDescription,
+                property: "og:description",
+                content: metaDescription
               },
               {
-                name: 'twitter:card',
-                content: 'summary',
+                name: "twitter:card",
+                content: "summary"
               },
               {
-                name: 'twitter:creator',
-                content: siteMetadata.social.twitter,
+                name: "twitter:creator",
+                content: siteMetadata.social.twitter
               },
               {
-                name: 'twitter:title',
-                content: title || siteMetadata.title,
+                name: "twitter:title",
+                content: title || siteMetadata.title
               },
               {
-                name: 'twitter:description',
-                content: metaDescription,
-              },
+                name: "twitter:description",
+                content: metaDescription
+              }
             ]
               .concat(
                 metaImage
                   ? [
                       {
-                        property: 'og:image',
-                        content: metaImage,
+                        property: "og:image",
+                        content: metaImage
                       },
                       {
-                        name: 'twitter:image',
-                        content: metaImage,
-                      },
+                        name: "twitter:image",
+                        content: metaImage
+                      }
                     ]
                   : []
               )
@@ -97,8 +97,8 @@ function SEO({ meta, image, title, description, slug, lang = 'pt-br' }) {
 
 SEO.defaultProps = {
   meta: [],
-  title: '',
-  slug: '',
+  title: "",
+  slug: ""
 };
 
 SEO.propTypes = {
@@ -106,7 +106,7 @@ SEO.propTypes = {
   image: PropTypes.string,
   meta: PropTypes.array,
   slug: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default SEO;

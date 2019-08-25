@@ -3,7 +3,7 @@ title: Title Here
 date: '1997-01-06'
 spoiler: I Hate Spoilers
 
-[Linked Content](https://henriquetavares.com) and an `emphasis`.
+[Linked Content](https://leonardoprocopio.com) and an `emphasis`.
 
 * 🤔 Topics 1
 * 🤔 Topics 2
