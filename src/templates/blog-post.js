@@ -1,22 +1,22 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import get from 'lodash/get';
+import React from "react";
+import { Link, graphql } from "gatsby";
+import get from "lodash/get";
 
-import '../fonts/fonts-post.css';
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import Panel from '../components/Panel';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
-import { rhythm, scale } from '../utils/typography';
+import "../fonts/fonts-post.css";
+import Bio from "../components/Bio";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import Panel from "../components/Panel";
+import { formatPostDate, formatReadingTime } from "../utils/helpers";
+import { rhythm, scale } from "../utils/typography";
 import {
   codeToLanguage,
   createLanguageLink,
-  loadFontsForCode,
-} from '../utils/i18n';
+  loadFontsForCode
+} from "../utils/i18n";
 
-const GITHUB_USERNAME = 'gaearon';
-const GITHUB_REPO_NAME = 'overreacted.io';
+const GITHUB_USERNAME = "gaearon";
+const GITHUB_REPO_NAME = "overreacted.io";
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
@@ -24,13 +24,13 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const siteTitle = get(this.props, "data.site.siteMetadata.title");
     let {
       previous,
       next,
       slug,
       translations,
-      translatedLinks,
+      translatedLinks
     } = this.props.pageContext;
     const lang = post.fields.langKey;
 
@@ -39,11 +39,11 @@ class BlogPostTemplate extends React.Component {
     translatedLinks.forEach(link => {
       // jeez
       function escapeRegExp(str) {
-        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       }
-      let translatedLink = '/' + link;
+      let translatedLink = "/" + link;
       html = html.replace(
-        new RegExp('"' + escapeRegExp(link) + '"', 'g'),
+        new RegExp('"' + escapeRegExp(link) + '"', "g"),
         '"' + translatedLink + '"'
       );
     });
@@ -56,11 +56,11 @@ class BlogPostTemplate extends React.Component {
     loadFontsForCode(lang);
     // TODO: this curried function is annoying
     const languageLink = createLanguageLink(slug, lang);
-    const enSlug = languageLink('pt-br');
+    const enSlug = languageLink("pt-br");
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${enSlug.slice(
       1,
       enSlug.length - 1
-    )}/index${lang === 'pt-br' ? '' : '.' + lang}.md`;
+    )}/index${lang === "pt-br" ? "" : "." + lang}.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://overreacted.io${enSlug}`
     )}`;
@@ -81,15 +81,15 @@ class BlogPostTemplate extends React.Component {
         <main>
           <article>
             <header>
-              <h1 style={{ color: 'var(--textTitle)' }}>
+              <h1 style={{ color: "var(--textTitle)" }}>
                 {post.frontmatter.title}
               </h1>
               <p
                 style={{
                   ...scale(-1 / 5),
-                  display: 'block',
+                  display: "block",
                   marginBottom: rhythm(1),
-                  marginTop: rhythm(-4 / 5),
+                  marginTop: rhythm(-4 / 5)
                 }}
               >
                 {formatPostDate(post.frontmatter.date, lang)}
@@ -100,9 +100,9 @@ class BlogPostTemplate extends React.Component {
             <footer>
               <p>
                 <a href="mailto:leonardolp@gmail.com" rel="noopener noreferrer">
-                  {lang === 'pt-br'
-                    ? 'Algum erro, sugestão, dúvida ou feedback? Fale comigo! ;)'
-                    : 'Any errors, suggestions, doubt or feedback? Talk to me! ;)'}
+                  {lang === "pt-br"
+                    ? "Algum erro, sugestão, dúvida ou feedback? Fale comigo! ;)"
+                    : "Any errors, suggestions, doubt or feedback? Talk to me! ;)"}
                 </a>
               </p>
             </footer>
@@ -111,30 +111,30 @@ class BlogPostTemplate extends React.Component {
         <aside>
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
-              marginTop: rhythm(0.25),
+              fontFamily: "Montserrat, sans-serif",
+              marginTop: rhythm(0.25)
             }}
           >
             <Link
               style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'var(--pink)',
+                boxShadow: "none",
+                textDecoration: "none",
+                color: "var(--pink)"
               }}
-              to={'/'}
+              to={"/"}
             >
-              {lang === 'pt-br' ? 'Quem sou eu?' : 'About me'}
+              {lang === "pt-br" ? "Quem sou eu?" : "About me"}
             </Link>
           </h3>
           <Bio lang={lang} />
           <nav>
             <ul
               style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                listStyle: 'none',
-                padding: 0,
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                listStyle: "none",
+                padding: 0
               }}
             >
               <li>
