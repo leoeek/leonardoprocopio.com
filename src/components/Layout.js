@@ -16,7 +16,7 @@ class Layout extends React.Component {
   };
 
   componentDidMount() {
-    this.setState({ theme: "dark" });
+    this.setState({ theme: "light" });
     window.__onThemeChange = () => {
       this.setState({ theme: "dark" });
     };

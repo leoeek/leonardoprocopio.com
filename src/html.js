@@ -14,8 +14,8 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes} className="dark">
-          <script
+        <body {...this.props.bodyAttributes} className="light">
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               (function() {
@@ -48,7 +48,7 @@ export default class HTML extends React.Component {
               })();
             `
             }}
-          />
+          /> */}
           {this.props.preBodyComponents}
           <div
             key={`body`}
