@@ -2,7 +2,7 @@
 title: Saber a versão do Ubuntu
 date: '2019-09-06'
 spoiler: Você já precisou saber a versão exata do Ubuntu através do terminal? 
-updateDate: '2019-09-06'
+updateDate: '2019-09-07'
 ---
 
 ## E lá vamos nós
@@ -15,7 +15,7 @@ Pesquisando na documentação achei várias formas, e trago aqui para vocês as 
 Caso precise de algo básico e rápdio utilze o seguinte comando no seu Terminal:
 
 ```jsx{}
-leo@ubuntu: sb_release -r
+leo@ubuntu: lsb_release -r
 Release: 18.04
 ```
 
@@ -52,4 +52,5 @@ UBUNTU_CODENAME=bionic
 ```
 ---
 
+Obs: Server para Ubuntu e seus derivados.
 Espero ter ajudado ;)
