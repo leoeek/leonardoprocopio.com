@@ -52,5 +52,5 @@ UBUNTU_CODENAME=bionic
 ```
 ---
 
-Obs: Server para Ubuntu e seus derivados.
+Obs: Serve para Ubuntu e seus derivados.
 Espero ter ajudado ;)
