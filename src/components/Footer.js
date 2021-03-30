@@ -18,8 +18,12 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: "right" }}>
-          <a href="mailto:leonardolp@gmail.com" rel="noopener noreferrer" title="Entre em contato!">
-          <img src={emailIcon} />
+          <a
+            href="mailto:leonardolp@gmail.com"
+            rel="noopener noreferrer"
+            title="Entre em contato!"
+          >
+            <img src={emailIcon} />
           </a>
         </div>
         <a
